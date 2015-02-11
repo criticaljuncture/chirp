@@ -2,12 +2,12 @@
 
 <%= form_for(@post) do |f| %>
   <%= f.text_area :body, placeholder: "what's happening?" %>
-  <%= f.submit "Post" %>
+  <%= f.submit "Send" %>
 <% end %>
 
-<ul>
+<ul class="no-bullets">
   <% @posts.each do |post| %>
-    <li>
+    <li class="rounded-box">
       <p><%= post.body %></p>
       <p><%= post.user.handle %> at <%= post.created_at %></p>
     </li>
