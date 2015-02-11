@@ -1,0 +1,15 @@
+<h1>Chirp</h1>
+
+<%= form_for(@post) do |f| %>
+  <%= f.text_area :body, placeholder: "what's happening?" %>
+  <%= f.submit "Post" %>
+<% end %>
+
+<ul>
+  <% @posts.each do |post| %>
+    <li>
+      <p><%= post.body %></p>
+      <p><%= post.user.handle %> at <%= post.created_at %></p>
+    </li>
+  <% end %>
+</ul>
