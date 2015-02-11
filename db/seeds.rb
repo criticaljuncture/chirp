@@ -12,6 +12,6 @@
   {handle: "crawford"},
 ].each{|attributes| User.where(attributes).first_or_create}
 
-User.first.posts.where(body: "posey message").first_or_create
-User.second.posts.where(body: "pence message").first_or_create
-User.third.posts.where(body: "crawford message").first_or_create
+User.first.posts.where(body: "I'm the MVP!").first_or_create
+User.second.posts.where(body: "Yes! Yes! Yes!").first_or_create
+User.third.posts.where(body: "One word. Hollywood.").first_or_create
